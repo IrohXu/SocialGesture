@@ -160,5 +160,5 @@ cython_debug/
 #.idea/
 
 data_sources/SocialGesture/
-data_sources/SocialGesture_clips/
-
+data_sources/pilot_dataset/
+tools/yolov10/annotation_output/
