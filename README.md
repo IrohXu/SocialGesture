@@ -12,7 +12,7 @@ pending
 ## Annotation Generation
 
 ```
-python yolov10/bbox_generation.py
+python tools/bbox_generation.py
 ```
 
 
