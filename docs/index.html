@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="SocialGesture: Delving into Multi-person Gesture Understanding">
+  <meta name="keywords" content="social deduction game, social ai, mutlimodal learning, dataset">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SocialGesture: Delving into Multi-person Gesture Understanding</title>
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/gt_icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <style>
+    table {
+      font-family: Arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    th {
+      background-color: #dddddd;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">SocialGesture: Delving into Multi-person Gesture Understanding</h1>
+          <div class="is-size-4 publication-conference">
+            <span class="conference-block" style="font-size: 30px; color:darkred">CVPR 2025</span>
+          </div>
+          <br>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.irohxucao.com/">Xu Cao</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/pv5667/">Pranav Virupaksha</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://vjwq.github.io/">Wenqi Jia</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://bolinlai.github.io/">Bolin Lai</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://fkryan.github.io/">Fiona Ryan</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://sites.google.com/view/sangmin-lee">Sangmin Lee</a><sup>3†</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://rehg.org/">James M. Rehg</a><sup>1†</sup>
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Illinois Urbana-Champaign</span>&nbsp;&nbsp;&nbsp;
+            <span class="author-block"><sup>2</sup>Georgia Institute of Technology</span>&nbsp;&nbsp;&nbsp;
+            <span class="author-block"><sup>3</sup>Sungkyunkwan University</span><br>
+            <span class="author-block"><sup>†</sup>Corresponding authors</span><br>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://cvpr.thecvf.com/virtual/2025/poster/34623 " class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/IrohXu/SocialGesture" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fa fa-database" aria-hidden="true"></i></span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <span style="font-size: 20px; color:darkorange">We have released new follow-up work with more annotations. More details can be found here: <br>
+            1. <a href="https://sangmin-git.github.io/projects/MMSI/">Modeling Multimodal Social Interactions</a> (CVPR 2024, Oral) <br>
+            2. Social Gesture (CVPR 2025, paper coming soon)
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <center>
+        <img src="figures/example_gesture.png"  style="width:100%;">
+      </center>
+    </div>
+    <div class="columns is-centered has-text-centered">
+        <div class="content has-text-justified">
+          <p>
+            Examples of the four deictic gesture categories in SocialGesture with subject-target relationships. From left to right: pointing (directing attention), showing (presenting objects), giving (transfer intention), and reaching (acquisition intention) gestures. Red boxes indicate gesture initiators (subjects) and blue notations indicate targets.
+          </p>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Abstract</h2>
+    <div class="columns is-centered has-text-centered">
+        <div class="content has-text-justified">
+          <p>
+            Previous research in human gesture recognition has largely overlooked multi-person interactions, which are crucial for understanding the social context of naturally occurring gestures. This limitation in existing datasets presents a significant challenge in aligning human gestures with other modalities like language and speech. To address this issue, we introduce SocialGesture, the first large-scale dataset specifically designed for multi-person gesture analysis. SocialGesture features a diverse range of natural scenarios and supports multiple gesture analysis tasks, including video-based recognition and temporal localization, providing a valuable resource for advancing the study of gesture during complex social interactions. Furthermore, we propose a novel visual question answering (VQA) task to benchmark vision language models' (VLMs) performance on social gesture understanding. Our findings highlight several limitations of current gesture recognition models, offering insights into future directions for improvement in this field. SocialGesture is available at <a href="https://huggingface.co/datasets/IrohXu/SocialGesture">https://huggingface.co/datasets/IrohXu/SocialGesture</a>.
+          </p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Dataset Overview</h2>
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <center>
+              <img src="figures/datasets_v3.png"  style="width:50%;">
+            <center>
+              <img src="figures/dataset_comparison.png"  style="width:100%;">
+          </div>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="content has-text-justified">
+                <p>
+                  Example frames and comparisons with other video-based gesture datasets. SocialGesture is the only dataset featuring <i>multi-person interactions</i> and focusing on natural gestures with meaningful social communication.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-body">
+            <center>
+              <img src="figures/dataset_diversity.png"  style="width:100%;">
+            </center>
+          </div>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="content has-text-justified">
+                <p>
+                  SocialGesture is composed of diverse multi-person social interactions from YouTube and <a href="https://ego4d-data.org/" target="_blank">Ego4D</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <h2 class="title is-3">Action Localization & Recognition</h2>
+        <div class="container is-max-desktop">
+          <div class="hero-body" style="display: flex; justify-content: center; gap: 20px;">
+              <img src="figures/localization_task2.png"  style="width:50%;">
+              <img src="figures/recognition_task2.png"  style="width:50%;">
+          </div>
+        </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="content has-text-justified">
+              <p>
+                Our dataset supports temporal action localization, gesture recognition, and gesture type classification. Temporal action localization consists of not only identifying temporal intervals of gesture instances but also estimating corresponding confidence values. Gesture recognition is a binary classification task for detecting whether gestures are present. Gesture type classification categorizes recognized gestures into one of the four deictic social gestures in our dataset (pointing, showing, reaching, giving).
+              </p>
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <h2 class="title is-3">Visual Question Answering</h2>
+        <div class="container is-max-desktop">
+          <div class="hero-body" style="display: flex; justify-content: center; gap: 20px;">
+              <img src="figures/VQA_sample_v4_1.png"  style="width:50%;">
+              <img src="figures/VQA_sample_v4_2.png"  style="width:50%;">
+          </div>
+        </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="content has-text-justified">
+              <p>
+                Demonstration of our novel social gesture visual question-answering task (SocialVQA). SocialVQA consists of three subtasks: Global Perception, Gesture Understanding, and Gesture Localization. Global Perception is intended to benchmark models' basic comprehension capabilities, such as counting the number of people in each scene or providing a scene description. Gesture Understanding consists of both gesture recognition and type classification (see above). Gesture Localization uses gesture iniator and target bounding box annotations to test models' ability to localize iniators and targets, as well as determine if the target is human.
+                See below for evaluation metrics on these tasks.
+              </p>
+            </div>
+          </div>
+        </div>
+        <br>
+        <h2 class="title is-3">VQA Evaluation</h2>
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <center>
+              <img src="figures/SocialVQA_metrics.png"  style="width:100%;">
+            </center>
+          </div>
+        </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="content has-text-justified">
+              <p>
+                We report the performance of both open-source and closed-source SOTA VLMs on the SocialVQA task. Gesture Localization tasks, related to target localization and classification, are among the most challenging. Interestingly, none of the VLMs we test exceed 70% accuracy on the simplest task of counting humans. Additionally, we finetune Qwen2-VL-7B fully and with LoRA and achieve improvement over the base model in key metrics.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{cao2025socialgesture,
+  title={SocialGesture: Delving into Multi-person Gesture Understanding},
+  author={Cao, Xu and Virupaksha, Pranav and Jia, Wenqi and Lai, Bolin and Ryan, Fiona and Lee, Sangmin and Rehg, James M},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2025}
+}
+  </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            We appreciate the original source code from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
